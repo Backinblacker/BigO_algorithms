@@ -43,17 +43,22 @@ less_than_100 ([1, 3, 10, 99, 55])
 # Comment time complexity
 # Take a screenshot and upload it to the personal instructor slack channel
 
-# def duplicate_names(names_list):
-#     duplicate_found = False
-#     while True:
-#         for name in names_list:
-#             if names_list == name:
-#                 return True
-#         if duplicate_found == False:
-#             return False
+# 0(n^2) time complexity
+def duplicate_names(names_list):
+    existing_names = []
+    for name in names_list:
+        if name in existing_names:
+            print("True")
+            return True
+        else:
+            existing_names.append(name)
+    print("False")
+    return False
 
-# list_of_names = ["JJ", "Megan", "Gavin", "Chris", "Chris", "Kyle", "Slagathor"]
-# duplicate_question = duplicate_names(list_of_names)
+list_of_names = ["JJ", "Megan", "Gavin", "Chris", "Kyle", "Slagathor", "Chris"]
+list_of_names_two = ["Kyle", "Jamie", "Steven"]
+duplicate_names(list_of_names)
+duplicate_names(list_of_names_two)
 
 # Task Number 4
 # Given a list of numbers, MANUALLY sort the list into ascending order
@@ -80,5 +85,5 @@ def sort_list (numbers):
                 unsorted = True
     print(numbers)
 
-unsorted = [10, 120, 15, 3, 65, 49, 17, 100, 13]
+unsorted = [10, 120, 15, 3, 65, 49, 17, 100, 13, 50, 1000, 99, 64, 129, 113]
 sorted = sort_list(unsorted)
