@@ -43,7 +43,7 @@ less_than_100 ([1, 3, 10, 99, 55])
 # Comment time complexity
 # Take a screenshot and upload it to the personal instructor slack channel
 
-# 0(n^2) time complexity
+# 0(n) time complexity
 def duplicate_names(names_list):
     existing_names = []
     for name in names_list:
@@ -70,7 +70,7 @@ duplicate_names(list_of_names_two)
 # Comment time complexity
 # Take a screenshot and upload it to the personal instructor slack channel
 
-# O(n^3) time complexity
+# O(n^2) time complexity
 def sort_list (numbers):
     length = len(numbers) - 1
     unsorted = True
