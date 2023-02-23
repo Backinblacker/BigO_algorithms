@@ -4,7 +4,7 @@
 # Comment stating the time complexity
 # Take a screenshot and upload it to the personal instructor slack channel
 
-# O(log n) time complexity
+# O(1) time complexity
 def is_even(number):
     if number %2 == 0:
         return True
@@ -24,8 +24,13 @@ print(odd_number)
 # Comment stating the time complexity
 # Take a screenshot and upload it to the personal instructor slack channel
 
+#O(n^2) time complexity
 def less_than_100(list_of_numbers):
-    pass
+    for number in list_of_numbers:
+        if number > 100:
+            return False
+        else:
+            return True
 
 # Task Number 3
 # Given a list of names, determine if any names are contained in the list more than once
@@ -34,8 +39,18 @@ def less_than_100(list_of_numbers):
 # Comment time complexity
 # Take a screenshot and upload it to the personal instructor slack channel
 
-def duplicate_names(names_list):
-    pass
+# def duplicate_names(names_list):
+#     duplicate_found = False
+#     while True:
+#         for name in names_list:
+#             if names_list == name:
+
+#                 return True
+#         if duplicate_found == False:
+#             return False
+
+# list_of_names = ["JJ", "Megan", "Gavin", "Chris", "Chris", "Kyle", "Slagathor"]
+# duplicate_question = duplicate_names(list_of_names)
 
 # Task Number 4
 # Given a list of numbers, MANUALLY sort the list into ascending order
@@ -47,8 +62,20 @@ def duplicate_names(names_list):
 # Comment time complexity
 # Take a screenshot and upload it to the personal instructor slack channel
 
-def sort_list (arr):
-    pass
+# O(n^3) time complexity
+def sort_list (numbers):
+    length = len(numbers) - 1
+    unsorted = True
+
+    while unsorted:
+        unsorted = False
+        for number in range(0,length):
+            if numbers[number] > numbers[number + 1]:
+                hold = numbers[number + 1]
+                numbers[number + 1] = numbers[number]
+                numbers[number] = hold
+                unsorted = True
+    print(numbers)
 
 unsorted = [10, 120, 15, 3, 65, 49, 17, 100, 13]
 sorted = sort_list(unsorted)
