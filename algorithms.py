@@ -24,7 +24,7 @@ print(odd_number)
 # Comment stating the time complexity
 # Take a screenshot and upload it to the personal instructor slack channel
 
-#O(n^2) time complexity
+#O(n) time complexity
 def less_than_100(list_of_numbers):
     for number in list_of_numbers:
         if number > 99:
