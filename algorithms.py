@@ -27,10 +27,14 @@ print(odd_number)
 #O(n^2) time complexity
 def less_than_100(list_of_numbers):
     for number in list_of_numbers:
-        if number > 100:
+        if number > 99:
+            print("False")
             return False
-        else:
-            return True
+    print("True")
+    return True
+        
+less_than_100 ([1, 50, 6 , 50, 25, 250])
+less_than_100 ([1, 3, 10, 99, 55])
 
 # Task Number 3
 # Given a list of names, determine if any names are contained in the list more than once
@@ -44,7 +48,6 @@ def less_than_100(list_of_numbers):
 #     while True:
 #         for name in names_list:
 #             if names_list == name:
-
 #                 return True
 #         if duplicate_found == False:
 #             return False
